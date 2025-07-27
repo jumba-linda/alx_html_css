@@ -246,3 +246,132 @@ body {
         ...
     </div>
 </section>
+/* ===== Videos Section ===== */
+.videos-section {
+    padding: 80px 0;
+    background-color: #FFFFFF; /* Use color from Figma */
+}
+
+/* Reuse your existing .section-container and .section-title */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px; /* Match Figma spacing */
+}
+
+.video-card {
+    border-radius: 8px; /* Match Figma */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+.video-thumbnail {
+    position: relative;
+    margin-bottom: 12px; /* Match Figma */
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Match Figma */
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px; /* Match Figma */
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-thumbnail:hover .play-button {
+    opacity: 1;
+}
+
+.play-button img {
+    width: 20px; /* Match Figma icon size */
+    margin-left: 3px; /* Center the play icon */
+}
+.video-info {
+    padding: 0 8px; /* Match Figma */
+}
+
+.video-title {
+    font-size: 18px; /* Match Figma */
+    font-weight: 600;
+    color: #333333; /* Match Figma */
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.video-author {
+    font-size: 14px; /* Match Figma */
+    color: #777777; /* Match Figma */
+    margin-bottom: 8px;
+}
+
+.video-stats {
+    display: flex;
+    align-items: center;
+    font-size: 13px; /* Match Figma */
+    color: #999999; /* Match Figma */
+}
+
+.views {
+    margin-right: 15px; /* Match Figma spacing */
+    position: relative;
+}
+
+.views::after {
+    content: "•";
+    position: absolute;
+    right: -10px;
+}
+@media (max-width: 1024px) {
+    .videos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .videos-section {
+        padding: 60px 0;
+    }
+
+    .videos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .videos-section {
+        background-color: #121212;
+    }
+    .video-title {
+        color: #FFFFFF;
+    }
+}
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Match your video aspect ratio */
+    object-fit: cover;
+}
