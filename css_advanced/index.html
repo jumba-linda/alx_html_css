@@ -8,36 +8,142 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Company Logo">
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="Company Logo">
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">About</a></li>
+                    <li class="nav-item"><a href="#">Services</a></li>
+                    <li class="nav-item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <section class="hero">
-            <h1>Welcome to Our Website</h1>
-            <p>Discover amazing features and services</p>
-            <button class="cta-button">Learn More</button>
-        </section>
+    <!-- Banner/Hero Section -->
+    <!-- Quotes Section -->
+    <!-- Videos Section -->
+    <!-- Membership Section -->
+<section class="membership-section">
+    <div class="section-container">
+        <h2 class="section-title">Become a Member</h2>
+        <p class="section-subtitle">Choose the plan that's right for you</p>
 
-        <section class="features">
-            <!-- Feature cards will go here -->
-        </section>
-    </main>
+        <div class="pricing-grid">
+            <!-- Basic Plan -->
+            <div class="pricing-card">
+                <div class="plan-header">
+                    <h3 class="plan-name">Basic</h3>
+                    <p class="plan-price">$9.99<span class="plan-period">/month</span></p>
+                </div>
+                <ul class="plan-features">
+                    <li>Access to basic content</li>
+                    <li>Standard video quality</li>
+                    <li>Limited downloads</li>
+                    <li>Email support</li>
+                </ul>
+                <button class="plan-button">Get Started</button>
+            </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2023 Company Name. All rights reserved.</p>
-    </footer>
+            <!-- Premium Plan (Featured) -->
+            <div class="pricing-card featured">
+                <div class="feature-badge">Most Popular</div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Premium</h3>
+                    <p class="plan-price">$19.99<span class="plan-period">/month</span></p>
+                </div>
+                <ul class="plan-features">
+                    <li>Access to all content</li>
+                    <li>HD video quality</li>
+                    <li>Unlimited downloads</li>
+                    <li>Priority support</li>
+                    <li>Exclusive content</li>
+                </ul>
+                <button class="plan-button featured-button">Get Started</button>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="pricing-card">
+                <div class="plan-header">
+                    <h3 class="plan-name">Pro</h3>
+                    <p class="plan-price">$29.99<span class="plan-period">/month</span></p>
+                </div>
+                <ul class="plan-features">
+                    <li>Access to all content</li>
+                    <li>4K video quality</li>
+                    <li>Unlimited downloads</li>
+                    <li>24/7 VIP support</li>
+                    <li>Exclusive content</li>
+                    <li>Early access to new features</li>
+                </ul>
+                <button class="plan-button">Get Started</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="videos-section">
+    <div class="section-container">
+        <h2 class="section-title">Featured Videos</h2>
+        <div class="videos-grid">
+            <!-- Video 1 -->
+            <article class="video-card">
+                <div class="video-thumbnail">
+                    <img src="images/video1-thumbnail.jpg" alt="Video thumbnail">
+                    <div class="play-button">
+                        <img src="images/play-icon.svg" alt="Play">
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Video Title Goes Here</h3>
+                    <p class="video-author">By Author Name</p>
+                    <div class="video-stats">
+                        <span class="views">15K views</span>
+                        <span class="duration">5:30</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Repeat for other videos (typically 3-6 videos) -->
+        </div>
+    </div>
+</section>
+<section class="quotes-section">
+    <div class="section-container">
+        <h2 class="section-title">Inspirational Quotes</h2>
+        <div class="quotes-grid">
+            <!-- Quote 1 -->
+            <article class="quote-card">
+                <div class="quote-content">
+                    <img src="images/quote-icon.png" alt="Quote icon" class="quote-icon">
+                    <blockquote class="quote-text">
+                        This is an inspiring quote that motivates people to take action.
+                    </blockquote>
+                </div>
+                <div class="quote-author">
+                    <img src="images/author1.jpg" alt="Author 1" class="author-image">
+                    <div class="author-info">
+                        <p class="author-name">John Doe</p>
+                        <p class="author-title">CEO, Company Inc.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Repeat for other quotes (typically 3-4 quotes) -->
+        </div>
+    </div>
+</section>
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Your Main Heading</h1>
+            <p>Your compelling subheading text</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </section>
 </body>
 </html>
