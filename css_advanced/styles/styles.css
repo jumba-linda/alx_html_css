@@ -521,3 +521,111 @@ body {
         padding: 25px 20px;
     }
 }
+/* ===== FAQ Section ===== */
+.faq-section {
+    padding: 80px 0;
+    background-color: #FFFFFF; /* Use color from Figma */
+}
+
+.faq-accordion {
+    max-width: 800px; /* Match Figma width */
+    margin: 0 auto;
+}
+.faq-item {
+    margin-bottom: 15px; /* Match Figma spacing */
+    border: 1px solid #EAEAEA; /* Match Figma */
+    border-radius: 8px; /* Match Figma */
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #FAFAFA; /* Match Figma hover color */
+}
+
+.faq-question span:first-child {
+    font-size: 18px; /* Match Figma */
+    font-weight: 600;
+    color: #333333; /* Match Figma */
+}
+
+.faq-icon {
+    font-size: 24px; /* Match Figma */
+    font-weight: 300;
+    color: #555555; /* Match Figma */
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #FFFFFF; /* Match Figma */
+}
+
+.faq-answer p {
+    padding: 0 25px 20px;
+    color: #666666; /* Match Figma */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Active state when FAQ is open */
+.faq-item.active .faq-question {
+    background-color: #FAFAFA; /* Match Figma active color */
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px; /* Adjust based on content */
+}
+.faq-contact {
+    margin-top: 40px; /* Match Figma spacing */
+    text-align: center;
+    font-size: 16px; /* Match Figma */
+    color: #666666; /* Match Figma */
+}
+
+.faq-contact a {
+    color: #4285F4; /* Match Figma link color */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.faq-contact a:hover {
+    color: #3367D6; /* Slightly darker on hover */
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 60px 20px;
+    }
+
+    .faq-question {
+        padding: 16px 20px;
+    }
+
+    .faq-question span:first-child {
+        font-size: 16px;
+    }
+
+    .faq-answer p {
+        padding: 0 20px 16px;
+    }
+}
