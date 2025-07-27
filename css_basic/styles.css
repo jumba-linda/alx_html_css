@@ -1,29 +1,73 @@
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Full viewport height */
-}
-main {
-    display: flex;
-    flex-direction: row;
-    flex: auto; /* Takes remaining space */
-}
-article {
-    flex: 2; /* Takes 2/3 of width */
-    overflow-y: auto; /* Adds scroll if needed */
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
 }
 
-aside {
-    flex: 1; /* Takes 1/3 of width */
-    overflow-y: auto;
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
 }
+
+header a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: gold;
+}
+
+/* Logo styles */
+.logo {
+    font-size: 2rem;
+    color: gold;
+    margin-right: 1rem;
+}
+
+/* Article styles */
+article {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+}
+
+article p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+article h1, article h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Responsive design */
 @media screen and (max-width: 768px) {
     main {
         flex-direction: column;
     }
-
+    
     article, aside {
         flex: auto;
         width: 100%;
+    }
+    
+    article {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
     }
 }
