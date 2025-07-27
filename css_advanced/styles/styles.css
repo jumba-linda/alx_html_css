@@ -629,3 +629,13 @@ body {
         padding: 0 20px 16px;
     }
 }
+.faq-answer {
+    will-change: max-height;
+}
+.faq-icon {
+    /* Replace with background-image if using custom icons */
+    background-image: url('images/plus-icon.svg');
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
