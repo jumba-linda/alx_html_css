@@ -1,0 +1,117 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+}
+/* Header Styles */
+.header {
+    background-color: #FFFFFF; /* Change to your Figma color */
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 40px; /* Adjust to match Figma */
+    width: auto;
+}
+
+/* Navigation Styles */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Adjust spacing between nav items */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333333; /* Change to Figma color */
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #FF0000; /* Change to hover color from Figma */
+}
+/* Banner Styles */
+.banner {
+    height: 600px; /* Adjust to Figma dimensions */
+    background-image: url('../images/banner-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    margin-top: 80px; /* To account for fixed header */
+}
+
+.banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #FFFFFF; /* Change to Figma text color */
+}
+
+.banner h1 {
+    font-size: 48px; /* Adjust to Figma */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.banner p {
+    font-size: 20px; /* Adjust to Figma */
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* CTA Button Styles */
+.cta-button {
+    background-color: #FF0000; /* Change to Figma button color */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px; /* Adjust to Figma */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #CC0000; /* Darker shade for hover */
+}
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        margin-top: 20px;
+    }
+
+    .banner {
+        height: 400px;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+    }
+}
