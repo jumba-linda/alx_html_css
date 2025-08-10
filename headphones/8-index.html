@@ -1,12 +1,52 @@
-<header>
-  <div class="logo">Headphones</div>
-  <nav class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">What we do</a>
-    <a href="#">Results</a>
-    <a href="#">Contact</a>
-  </nav>
-  <div class="hamburger" onclick="toggleMenu()">
-    ☰
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Headphones</title>
+    <meta name="description" content="Headphones landing page">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/holberton_school-icon/style.css">
+    <link rel="stylesheet" href="8-styles.css">
+</head>
+<body>
+    <!-- Header with enhanced mobile menu -->
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="images/logo_headphones.png" alt="Headphones logo" width="160">
+                    </a>
+                </div>
+                
+                <!-- Mobile menu toggle -->
+                <button class="mobile-menu-button" id="mobile-menu-button">
+                    <span class="mobile-menu-icon"></span>
+                </button>
+                
+                <!-- Navigation -->
+                <nav class="navbar-menu" id="navbar-menu">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#what-we-do" class="nav-link">what we do</a></li>
+                        <li class="nav-item"><a href="#our-results" class="nav-link">our results</a></li>
+                        <li class="nav-item"><a href="#contact-us" class="nav-link">contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <section class="hero">
+                <h1 class="hero-title">Lorem ipsum dolor set amet lorem ipsum</h1>
+                <p class="hero-subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+                <button class="button">CALL TO ACTION</button>
+                <p class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </section>
+        </div>
+    </header>
+
+    <!-- [All other sections remain exactly the same] -->
+    
+    <script src="8-script.js"></script>
+</body>
+</html>

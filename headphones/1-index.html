@@ -1,24 +1,83 @@
-<section class="what-we-do">
-  <div class="container">
-    <h2>What we do…</h2>
-    <div class="features">
-      <div class="feature">
-        <span class="icon icon-sound"></span>
-        <h3>High-quality sound</h3>
-        <p>Experience crystal-clear audio with deep bass and rich tones.</p>
-      </div>
-      <div class="feature">
-        <span class="icon icon-design"></span>
-        <h3>Modern design</h3>
-        <p>Stylish and ergonomic headphones that match your lifestyle.</p>
-      </div>
-      <div class="feature">
-        <span class="icon icon-support"></span>
-        <h3>24/7 Support</h3>
-        <p>We’re here to help anytime, anywhere.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<link rel="stylesheet" href="icons/icons.css">
-<span class="holberton_school-icon-sound icon"></span>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Headphones</title>
+    <meta name="description" content="Headphones landing page">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/holberton_school-icon/style.css">
+    <link rel="stylesheet" href="1-styles.css">
+</head>
+<body>
+    <!-- Header (same as Task 1) -->
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="images/logo_headphones.png" alt="Headphones logo" width="160">
+                    </a>
+                </div>
+                
+                <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
+                <label for="mobile-menu" class="mobile-menu-button">
+                    <span class="mobile-menu-icon"></span>
+                </label>
+                
+                <nav class="navbar-menu">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#what-we-do" class="nav-link">what we do</a></li>
+                        <li class="nav-item"><a href="#our-results" class="nav-link">our results</a></li>
+                        <li class="nav-item"><a href="#contact-us" class="nav-link">contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <section class="hero">
+                <h1 class="hero-title">Lorem ipsum dolor set amet lorem ipsum</h1>
+                <p class="hero-subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+                <button class="button">CALL TO ACTION</button>
+                <p class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </section>
+        </div>
+    </header>
+
+    <!-- What we do section -->
+    <section id="what-we-do" class="section-what-we-do">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What we do...</h2>
+                <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <span class="holberton_school-icon-ic_sound icon"></span>
+                    <h3 class="service-title">Lorem ipsum</h3>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                
+                <div class="service-item">
+                    <span class="holberton_school-icon-ic_video icon"></span>
+                    <h3 class="service-title">Lorem ipsum</h3>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                
+                <div class="service-item">
+                    <span class="holberton_school-icon-ic_music icon"></span>
+                    <h3 class="service-title">Lorem ipsum</h3>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                
+                <div class="service-item">
+                    <span class="holberton_school-icon-ic_hearing icon"></span>
+                    <h3 class="service-title">Lorem ipsum</h3>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

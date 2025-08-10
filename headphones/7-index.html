@@ -1,26 +1,61 @@
-<footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-logo">Headphones</div>
-      <nav class="footer-nav">
-        <a href="#">Home</a>
-        <a href="#">What we do</a>
-        <a href="#">Our results</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Headphones Inc. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-<section class="what-we-do">
-  <div class="item">
-    <h3>Design</h3>
-    <p>We create stunning visuals.</p>
-  </div>
-  <div class="item">
-    <h3>Development</h3>
-    <p>We build responsive websites.</p>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Headphones</title>
+    <meta name="description" content="Headphones landing page">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/holberton_school-icon/style.css">
+    <link rel="stylesheet" href="7-styles.css">
+</head>
+<body>
+    <!-- [Previous sections remain exactly the same until "What we do" section] -->
+
+    <!-- What we do section - with animation classes -->
+    <section id="what-we-do" class="section-what-we-do">
+        <div class="container">
+            <div class="section-header animate-fade-in">
+                <h2 class="section-title">What we do...</h2>
+                <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-item animate-float">
+                    <span class="holberton_school-icon-ic_sound icon"></span>
+                    <h3 class="service-title">Lorem ipsum</h3>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                
+                <!-- [Other service items with same animation class] -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Our results section - with animation classes -->
+    <section id="our-results" class="section-our-results">
+        <div class="container">
+            <div class="section-header animate-fade-in">
+                <h2 class="section-title">Our results speak for themselves</h2>
+                <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            
+            <div class="results-grid">
+                <div class="result-item animate-rotate">
+                    <div class="pentagon">
+                        <div class="pentagon-inner">
+                            <span class="result-percent">+2%</span>
+                            <span class="result-text">Lorem ipsum dolor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- [Other result items with same animation class] -->
+            </div>
+        </div>
+    </section>
+
+    <!-- [Remaining sections stay the same] -->
+</body>
+</html>

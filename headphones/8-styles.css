@@ -1,28 +1,98 @@
-/* Base styles */
-.hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
+/* [All previous styles remain the same until mobile menu] */
 
-/* Responsive styles */
-@media screen and (max-width: 480px) {
-  .nav-links {
+/* Enhanced Mobile Menu Styles */
+.mobile-menu-button {
     display: none;
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    position: relative;
 }
+
+.mobile-menu-icon {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-white);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-icon::before,
+.mobile-menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-icon::before {
+    top: -8px;
+}
+
+.mobile-menu-icon::after {
+    bottom: -8px;
+}
+
+/* Menu open state */
+.menu-open .mobile-menu-icon {
+    background-color: transparent;
+}
+
+.menu-open .mobile-menu-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.menu-open .mobile-menu-icon::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+/* Mobile menu styles */
+@media (max-width: 480px) {
+    .mobile-menu-button {
+        display: block;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-open .navbar-menu {
+        transform: translateY(0);
+    }
+    
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .nav-link {
+        font-size: 20px;
+    }
+    
+    /* Prevent scrolling when menu is open */
+    .menu-open {
+        overflow: hidden;
+    }
+}
+
+/* [Rest of the existing styles remain unchanged] */

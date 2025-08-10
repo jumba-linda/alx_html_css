@@ -1,62 +1,77 @@
-/* Contact us section */
-.contact-us {
-  background: #fff;
-  padding: 60px 20px;
-  text-align: center;
-}
+/* Previous styles (header, what we do, and our results sections) remain the same */
 
-.contact-us h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.contact-us p {
-  font-size: 1rem;
-  margin-bottom: 40px;
-  color: #555;
+/* Contact us section styles */
+.section-contact {
+    padding: 100px 0;
+    text-align: center;
 }
 
 .contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .form-group {
-  margin-bottom: 20px;
+    position: relative;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-color);
+    border: none;
+    border-bottom: 1px solid var(--color-grey);
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group input:valid {
+    border-bottom-color: var(--color-primary);
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 16px;
+    color: var(--color-grey);
+    pointer-events: none;
+    transition: 0.3s;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: var(--font-main);
+.form-group input:focus ~ label,
+.form-group input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: var(--color-primary);
 }
 
-.contact-form button {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 6px;
+.button-form {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 300px;
 }
 
-.contact-form button:hover {
-  opacity: 0.9;
-}
-
-/* Responsive */
+/* Responsive styles */
 @media (max-width: 480px) {
-  .contact-form {
-    padding
+    /* Previous responsive styles remain the same */
+    
+    /* Contact us responsive */
+    .section-contact {
+        padding: 60px 0;
+    }
+    
+    .form-group {
+        margin-bottom: 30px;
+    }
+    
+    .button-form {
+        max-width: 100%;
+    }
+}

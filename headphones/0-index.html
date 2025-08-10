@@ -1,42 +1,50 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Headphones — Header/Hero</title>
-  <link rel="stylesheet" href="0-styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Headphones</title>
+    <meta name="description" content="Headphones landing page">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="0-styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#"><img src="assets/images/logo.png" alt="logo"></a>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="#what-we-do">What we do</a></li>
-          <li><a href="#results">Results</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>Exceptional sound. Designed for creators.</h1>
-        <p>Lightweight, powerful headphones made for long sessions.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#">Buy now</a>
-          <a class="btn btn-ghost" href="#">Learn more</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="images/logo_headphones.png" alt="Headphones logo" width="160">
+                    </a>
+                </div>
+                
+                <!-- Mobile menu toggle (hidden on desktop) -->
+                <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
+                <label for="mobile-menu" class="mobile-menu-button">
+                    <span class="mobile-menu-icon"></span>
+                </label>
+                
+                <!-- Navigation -->
+                <nav class="navbar-menu">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#what-we-do" class="nav-link">what we do</a></li>
+                        <li class="nav-item"><a href="#our-results" class="nav-link">our results</a></li>
+                        <li class="nav-item"><a href="#contact-us" class="nav-link">contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Hero section -->
+            <section class="hero">
+                <h1 class="hero-title">Lorem ipsum dolor set amet lorem ipsum</h1>
+                <p class="hero-subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+                <button class="button">CALL TO ACTION</button>
+                <p class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </section>
         </div>
-      </div>
-      <div class="hero-image">
-        <img src="assets/images/hero-desktop.png" alt="Headphones">
-      </div>
-    </div>
-  </section>
+    </header>
 </body>
 </html>

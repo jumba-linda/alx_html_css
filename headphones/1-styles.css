@@ -1,61 +1,273 @@
-/* What we do section */
-.what-we-do {
-  background: #fff;
-  padding: 60px 20px;
-  text-align: center;
+/* CSS Variables and Base styles (same as Task 1) */
+:root {
+    --color-primary: #FF6565;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-grey: #a0a0a0;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
 }
 
-.what-we-do h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.features {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+html {
+    scroll-behavior: smooth;
 }
 
-.feature {
-  flex: 1;
-  min-width: 250px;
-  padding: 20px;
-  border-radius: 8px;
-  background: #f9f9f9;
-  transition: transform 0.3s ease;
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.feature:hover {
-  transform: scale(1.05);
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.feature .icon {
-  font-size: 40px;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-  display: inline-block;
+ul {
+    list-style: none;
 }
 
-.feature h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.feature p {
-  font-size: 1rem;
-  color: #666;
+.button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 22px;
+    padding: 13px 30px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-  .features {
-    flex-direction: column;
+.button:hover,
+.button:active {
+    opacity: 0.9;
+}
+
+/* Header styles (same as Task 1) */
+.header {
+    background-image: url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 800px;
+    color: var(--color-white);
+    text-align: center;
+    padding-top: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
+    padding: 20px 0;
+}
 
-  .feature {
-    width: 100%;
+.header-logo img {
+    height: 32px;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: var(--color-primary);
+}
+
+.hero {
+    margin-top: 300px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-title {
+    font-size: 32px;
+    font-weight: 700;
     margin-bottom: 20px;
-  }
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.button {
+    margin-bottom: 60px;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.mobile-menu-check,
+.mobile-menu-button {
+    display: none;
+}
+
+/* What we do section styles */
+.section-what-we-do {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section-header {
+    max-width: 700px;
+    margin: 0 auto 80px;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.section-description {
+    color: var(--color-dark-grey);
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-item {
+    padding: 20px;
+}
+
+.icon {
+    font-size: 100px;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.service-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    color: var(--color-dark-grey);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    /* Header responsive styles (same as Task 1) */
+    .header {
+        min-height: 600px;
+        padding-top: 10px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-logo {
+        margin-bottom: 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: var(--color-white);
+        position: relative;
+    }
+
+    .mobile-menu-icon::before,
+    .mobile-menu-icon::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-white);
+    }
+
+    .mobile-menu-icon::before {
+        top: -8px;
+    }
+
+    .mobile-menu-icon::after {
+        bottom: -8px;
+    }
+
+    .mobile-menu-check:checked ~ .navbar-menu .nav {
+        display: flex;
+    }
+
+    .hero {
+        margin-top: 150px;
+        padding: 0 10px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    /* What we do responsive styles */
+    .section-what-we-do {
+        padding: 60px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+        padding: 0 10px;
+    }
+
+    .icon {
+        font-size: 80px;
+    }
 }

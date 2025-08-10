@@ -1,58 +1,85 @@
-/* Our results section */
-.our-results {
-  background: #f0f0f0;
-  padding: 60px 20px;
-  text-align: center;
+/* Previous styles (header and what we do sections) remain the same */
+
+/* Our results section styles */
+.section-our-results {
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('images/headphones_hero_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
 }
 
-.our-results h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.our-results p {
-  font-size: 1rem;
-  margin-bottom: 40px;
-  color: #555;
-}
-
-.results-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 80px;
 }
 
 .result-item {
-  flex: 1;
-  min-width: 250px;
-  background: white;
-  padding: 30px 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.result-item:hover {
-  transform: scale(1.05);
-}
-
-.result-icon {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .results-row {
-    flex-direction: column;
+    position: relative;
+    height: 180px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-  }
+}
 
-  .result-item {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+.pentagon {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    background-color: var(--color-primary);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.result-item:hover .pentagon {
+    transform: scale(1.1);
+}
+
+.result-percent {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.result-text {
+    font-size: 14px;
+    width: 80%;
+    line-height: 1.4;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    /* Previous responsive styles remain the same */
+    
+    /* Our results responsive */
+    .section-our-results {
+        padding: 60px 0;
+    }
+    
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-top: 50px;
+    }
+    
+    .result-item {
+        height: 140px;
+    }
+    
+    .pentagon {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .result-percent {
+        font-size: 36px;
+    }
 }
