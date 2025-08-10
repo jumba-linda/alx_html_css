@@ -1,0 +1,39 @@
+/* simple reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family: 'Source Sans Pro', system-ui, Arial, sans-serif;color:#111}
+:root{
+  --accent:#FF6565;
+  --max-width:1000px;
+  --btn-hover-opacity:0.9;
+}
+
+/* container */
+.container{max-width:var(--max-width);margin:0 auto;padding:0 16px}
+
+/* header */
+.site-header{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,0.05)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.nav-list{display:flex;gap:20px;list-style:none}
+.nav-list a{text-decoration:none;color:inherit}
+.nav-list a:hover{color:var(--accent)}
+
+/* hamburger hidden on desktop */
+.hamburger{display:none;border:0;background:none}
+
+/* hero */
+.hero{padding:60px 0}
+.hero-inner{display:flex;align-items:center;gap:40px}
+.hero-text h1{font-size:2rem;margin-bottom:12px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none}
+.btn-primary{background:var(--accent);color:white}
+.btn-primary:hover{opacity:var(--btn-hover-opacity)}
+.btn-ghost{border:1px solid #ddd;padding:9px 15px}
+.btn-ghost:hover{opacity:var(--btn-hover-opacity)}
+
+/* responsive layout for mobile at 480px */
+@media (max-width:480px){
+  .nav-list{display:none}
+  .hamburger{display:block}
+  .hero-inner{flex-direction:column;text-align:center}
+  .hero-image img{max-width:80%}
+}
